@@ -34,16 +34,13 @@ public class BusinessLogic {
                             System.err.println("Failed to parse JSON: " + e.getMessage());
                             return null;
                         }
-
                         JsonNode msh = payload.path("msh");
-
                         String timestampStr = msh.path("timestamp").asText(null);
                         Timestamp timestamp = null;
                         if (timestampStr != null && !timestampStr.isEmpty()) {
                             LocalDateTime localDateTime = LocalDateTime.parse(timestampStr, formatter);
                             timestamp = Timestamp.valueOf(localDateTime);
                         }
-
                         String ackCode = payload.path("ackCode").asText(null);
                         String refMessageIdStr = payload.path("refMessageId").asText(null);
                         UUID refMessageId = (refMessageIdStr != null && !refMessageIdStr.isEmpty()) ? UUID.fromString(refMessageIdStr) : null;
