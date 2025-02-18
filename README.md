@@ -86,17 +86,9 @@ The project uses the following Maven dependencies:
     <version>42.5.0</version>
 </dependency>
 ```
-
 ## Future Enhancements
 - Implementing error handling and logging mechanisms.
 - Enhancing Kafka consumer resilience.
 - Adding monitoring and alerting for Flink jobs.
 - Implementing a testing framework for Flink pipelines.
-
-## Contributors
-- [Your Name]
-- [Other Contributors]
-
-## License
-This project is licensed under the MIT License.
 
